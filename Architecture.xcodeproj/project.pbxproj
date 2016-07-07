@@ -12,6 +12,8 @@
 		65C250CB1D2EC7F200CB65D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C250C91D2EC7F200CB65D6 /* Main.storyboard */; };
 		65C250CD1D2EC7F200CB65D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C250CC1D2EC7F200CB65D6 /* Assets.xcassets */; };
 		65C250D01D2EC7F200CB65D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C250CE1D2EC7F200CB65D6 /* LaunchScreen.storyboard */; };
+		65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AE1D2EC96700C0A3CD /* Router.swift */; };
+		65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		65C250CC1D2EC7F200CB65D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C250CF1D2EC7F200CB65D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65C250D11D2EC7F200CB65D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65ED11AE1D2EC96700C0A3CD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersRoutingSwizzle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		65C250C41D2EC7F200CB65D6 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				65ED11AD1D2EC91A00C0A3CD /* ViewControllerRouting */,
 				65C250C51D2EC7F200CB65D6 /* AppDelegate.swift */,
 				65C250C71D2EC7F200CB65D6 /* ViewController.swift */,
 				65C250C91D2EC7F200CB65D6 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				65C250D11D2EC7F200CB65D6 /* Info.plist */,
 			);
 			path = Architecture;
+			sourceTree = "<group>";
+		};
+		65ED11AD1D2EC91A00C0A3CD /* ViewControllerRouting */ = {
+			isa = PBXGroup;
+			children = (
+				65ED11AE1D2EC96700C0A3CD /* Router.swift */,
+				65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */,
+			);
+			name = ViewControllerRouting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */,
 				65C250C81D2EC7F200CB65D6 /* ViewController.swift in Sources */,
+				65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */,
 				65C250C61D2EC7F200CB65D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +304,7 @@
 				65C250D61D2EC7F200CB65D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
