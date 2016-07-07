@@ -14,13 +14,13 @@ class TableViewDataDisplayer: CollectionDataDisplayer {
     
     
     func setupAutoCalculatingHeightForRow(withEstimatedRowHeight estimatedRowHeight: CGFloat) {
-        self.tableView.estimatedRowHeight = 150
+        self.tableView.estimatedRowHeight = estimatedRowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func reloadData() {
         super.reloadData()
-        
+        self.tableView.reloadData()
     }
     
 }
