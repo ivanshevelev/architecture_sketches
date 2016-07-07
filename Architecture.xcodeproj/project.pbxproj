@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6585795A1D2EE34F00A15472 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658579581D2EE34F00A15472 /* AppRouter.swift */; };
+		6585795B1D2EE34F00A15472 /* AppRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658579591D2EE34F00A15472 /* AppRoutable.swift */; };
 		65C250C61D2EC7F200CB65D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C250C51D2EC7F200CB65D6 /* AppDelegate.swift */; };
 		65C250C81D2EC7F200CB65D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C250C71D2EC7F200CB65D6 /* ViewController.swift */; };
 		65C250CB1D2EC7F200CB65D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C250C91D2EC7F200CB65D6 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		658579581D2EE34F00A15472 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		658579591D2EE34F00A15472 /* AppRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoutable.swift; sourceTree = "<group>"; };
 		65C250C21D2EC7F200CB65D6 /* Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C250C51D2EC7F200CB65D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C250C71D2EC7F200CB65D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		658579571D2EE33800A15472 /* AppRouting */ = {
+			isa = PBXGroup;
+			children = (
+				658579581D2EE34F00A15472 /* AppRouter.swift */,
+				658579591D2EE34F00A15472 /* AppRoutable.swift */,
+			);
+			name = AppRouting;
+			sourceTree = "<group>";
+		};
 		65C250B91D2EC7F200CB65D6 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +79,7 @@
 		65C250C41D2EC7F200CB65D6 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				658579571D2EE33800A15472 /* AppRouting */,
 				65ED11B21D2EC9E400C0A3CD /* DataDisplaying */,
 				65ED11AD1D2EC91A00C0A3CD /* ViewControllerRouting */,
 				65C250C51D2EC7F200CB65D6 /* AppDelegate.swift */,
@@ -170,10 +184,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */,
+				6585795B1D2EE34F00A15472 /* AppRoutable.swift in Sources */,
 				65ED11BA1D2ECC0D00C0A3CD /* TableViewDataDisplayer.swift in Sources */,
 				65C250C81D2EC7F200CB65D6 /* ViewController.swift in Sources */,
 				65ED11B81D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift in Sources */,
 				65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */,
+				6585795A1D2EE34F00A15472 /* AppRouter.swift in Sources */,
 				65ED11BE1D2ED67C00C0A3CD /* FullFetchableDataDisplayer.swift in Sources */,
 				65C250C61D2EC7F200CB65D6 /* AppDelegate.swift in Sources */,
 				65ED11BC1D2ECDA000C0A3CD /* RefreshableTableViewDataDisplayer.swift in Sources */,
