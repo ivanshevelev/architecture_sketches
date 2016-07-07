@@ -13,6 +13,8 @@ protocol FullFetchableDataDisplayerDataSource: RefreshableTableViewDataDisplayer
     func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
                                  didFetchNextDataWithCompletion completion: ((error: NSError?) -> Void))
     
+    func hasDataForFetch(forCollectionDataDisplayer collectionDataDisplayer: CollectionDataDisplayer) -> Bool
+    
 }
 
 class FullFetchableDataDisplayer: RefreshableTableViewDataDisplayer {
@@ -26,18 +28,23 @@ class FullFetchableDataDisplayer: RefreshableTableViewDataDisplayer {
     private var download = false
     
     func fetchNextIfNeeded(byIndexPath indexPath: NSIndexPath) {
-        let cellIndex = indexPath.row
-        let maxIndexAtSection = self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: indexPath.section)
         
-        let differense = maxIndexAtSection - cellIndex
+        let hasData = self.fullFetchableDataSource?.hasDataForFetch(forCollectionDataDisplayer: self)
         
-        if differense <= self.cellCountBeforeFetch && !self.download {
-            self.download = true
-            self.fullFetchableDataSource?.collectionDataDisplayer(self) { (error) in
-                self.download = false
-                self.reloadData()
-                if error != nil {
-                    self.delegate?.collectionDataDisplayer(self, didUpdateWithError: error!)
+        if let anotherData = hasData where anotherData == true {
+            let cellIndex = indexPath.row
+            let maxIndexAtSection = self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: indexPath.section)
+            
+            let differense = maxIndexAtSection - cellIndex
+            
+            if differense <= self.cellCountBeforeFetch && !self.download {
+                self.download = true
+                self.fullFetchableDataSource?.collectionDataDisplayer(self) { (error) in
+                    self.download = false
+                    self.reloadData()
+                    if error != nil {
+                        self.delegate?.collectionDataDisplayer(self, didUpdateWithError: error!)
+                    }
                 }
             }
         }
