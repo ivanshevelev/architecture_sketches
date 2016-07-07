@@ -16,6 +16,7 @@
 		65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */; };
 		65ED11B51D2EC9FB00C0A3CD /* DataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B31D2EC9FB00C0A3CD /* DataDisplayer.swift */; };
 		65ED11B61D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */; };
+		65ED11B81D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B71D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersRoutingSwizzle.swift; sourceTree = "<group>"; };
 		65ED11B31D2EC9FB00C0A3CD /* DataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDisplayer.swift; sourceTree = "<group>"; };
 		65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownFetchableDataDisplayer.swift; sourceTree = "<group>"; };
+		65ED11B71D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataDisplayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				65ED11B31D2EC9FB00C0A3CD /* DataDisplayer.swift */,
 				65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */,
+				65ED11B71D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift */,
 			);
 			name = DataDisplaying;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */,
 				65C250C81D2EC7F200CB65D6 /* ViewController.swift in Sources */,
+				65ED11B81D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift in Sources */,
 				65ED11B61D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift in Sources */,
 				65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */,
 				65C250C61D2EC7F200CB65D6 /* AppDelegate.swift in Sources */,
