@@ -14,6 +14,8 @@
 		65C250D01D2EC7F200CB65D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C250CE1D2EC7F200CB65D6 /* LaunchScreen.storyboard */; };
 		65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AE1D2EC96700C0A3CD /* Router.swift */; };
 		65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */; };
+		65ED11B51D2EC9FB00C0A3CD /* DataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B31D2EC9FB00C0A3CD /* DataDisplayer.swift */; };
+		65ED11B61D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		65C250D11D2EC7F200CB65D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65ED11AE1D2EC96700C0A3CD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersRoutingSwizzle.swift; sourceTree = "<group>"; };
+		65ED11B31D2EC9FB00C0A3CD /* DataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDisplayer.swift; sourceTree = "<group>"; };
+		65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownFetchableDataDisplayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		65C250C41D2EC7F200CB65D6 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				65ED11B21D2EC9E400C0A3CD /* DataDisplaying */,
 				65ED11AD1D2EC91A00C0A3CD /* ViewControllerRouting */,
 				65C250C51D2EC7F200CB65D6 /* AppDelegate.swift */,
 				65C250C71D2EC7F200CB65D6 /* ViewController.swift */,
@@ -76,6 +81,15 @@
 				65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */,
 			);
 			name = ViewControllerRouting;
+			sourceTree = "<group>";
+		};
+		65ED11B21D2EC9E400C0A3CD /* DataDisplaying */ = {
+			isa = PBXGroup;
+			children = (
+				65ED11B31D2EC9FB00C0A3CD /* DataDisplayer.swift */,
+				65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */,
+			);
+			name = DataDisplaying;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +165,10 @@
 			files = (
 				65ED11B11D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift in Sources */,
 				65C250C81D2EC7F200CB65D6 /* ViewController.swift in Sources */,
+				65ED11B61D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift in Sources */,
 				65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */,
 				65C250C61D2EC7F200CB65D6 /* AppDelegate.swift in Sources */,
+				65ED11B51D2EC9FB00C0A3CD /* DataDisplayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
