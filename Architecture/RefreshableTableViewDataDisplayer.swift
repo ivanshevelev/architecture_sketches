@@ -15,8 +15,8 @@ protocol RefreshableTableViewDataDisplayerDataSource: CollectionDataDisplayerDat
 
 class RefreshableTableViewDataDisplayer: TableViewDataDisplayer {
     
-    private var refreshableDataSource: RefreshableTableViewDataDisplayerDataSource? {
-        return self.dataSource as? RefreshableTableViewDataDisplayerDataSource
+    var refreshableDataSource: RefreshableTableViewDataDisplayerDataSource? {
+        return super.dataSource as? RefreshableTableViewDataDisplayerDataSource
     }
     
     func addRefreshControl() {
@@ -24,7 +24,7 @@ class RefreshableTableViewDataDisplayer: TableViewDataDisplayer {
         refreshControl.addTarget(self,
                                  action: #selector(RefreshableTableViewDataDisplayer.refreshData(_:)),
                                  forControlEvents: .ValueChanged)
-        self.tableView!.addSubview(refreshControl)
+        self.tableView.addSubview(refreshControl)
     }
     
     func refreshData(refreshControl: UIRefreshControl? = nil) {
