@@ -18,6 +18,7 @@
 		65ED11B61D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */; };
 		65ED11B81D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B71D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift */; };
 		65ED11BA1D2ECC0D00C0A3CD /* TableViewDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11B91D2ECC0D00C0A3CD /* TableViewDataDisplayer.swift */; };
+		65ED11BC1D2ECDA000C0A3CD /* RefreshableTableViewDataDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11BB1D2ECDA000C0A3CD /* RefreshableTableViewDataDisplayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownFetchableDataDisplayer.swift; sourceTree = "<group>"; };
 		65ED11B71D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataDisplayer.swift; sourceTree = "<group>"; };
 		65ED11B91D2ECC0D00C0A3CD /* TableViewDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataDisplayer.swift; sourceTree = "<group>"; };
+		65ED11BB1D2ECDA000C0A3CD /* RefreshableTableViewDataDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshableTableViewDataDisplayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				65ED11B41D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift */,
 				65ED11B71D2ECAFF00C0A3CD /* CollectionDataDisplayer.swift */,
 				65ED11B91D2ECC0D00C0A3CD /* TableViewDataDisplayer.swift */,
+				65ED11BB1D2ECDA000C0A3CD /* RefreshableTableViewDataDisplayer.swift */,
 			);
 			name = DataDisplaying;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				65ED11B61D2EC9FB00C0A3CD /* DownFetchableDataDisplayer.swift in Sources */,
 				65ED11B01D2EC96700C0A3CD /* Router.swift in Sources */,
 				65C250C61D2EC7F200CB65D6 /* AppDelegate.swift in Sources */,
+				65ED11BC1D2ECDA000C0A3CD /* RefreshableTableViewDataDisplayer.swift in Sources */,
 				65ED11B51D2EC9FB00C0A3CD /* DataDisplayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
