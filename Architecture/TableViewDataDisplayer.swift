@@ -10,7 +10,11 @@ import UIKit
 
 class TableViewDataDisplayer: CollectionDataDisplayer {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            self.reloadData()  
+        }
+    }
     
     
     func setupAutoCalculatingHeightForRow(withEstimatedRowHeight estimatedRowHeight: CGFloat) {

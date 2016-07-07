@@ -14,9 +14,6 @@ protocol CollectionDataDisplayerDataSource: class {
     
     func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
                                  numberOfRowsInSection section: Int) -> Int
-    
-    func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
-                                 didFetchFreshDataWithCompletion completion: ((error: NSError?) -> Void))
 }
 
 protocol CollectionDataDisplayerDelegate: class {
