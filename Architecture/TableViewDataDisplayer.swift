@@ -43,7 +43,7 @@ extension TableViewDataDisplayer: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        fatalError("method must be overriden")
+        fatalError("method must be overridden")
         
     }
     
