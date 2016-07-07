@@ -29,9 +29,7 @@ class FullFetchableDataDisplayer: RefreshableTableViewDataDisplayer {
     
     func fetchNextIfNeeded(byIndexPath indexPath: NSIndexPath) {
         
-        let hasData = self.fullFetchableDataSource?.hasDataForFetch(forCollectionDataDisplayer: self)
-        
-        if let anotherData = hasData where anotherData == true {
+        if let hasData = self.fullFetchableDataSource?.hasDataForFetch(forCollectionDataDisplayer: self) where hasData == true {
             let cellIndex = indexPath.row
             let maxIndexAtSection = self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: indexPath.section)
             
