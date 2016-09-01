@@ -3,7 +3,7 @@
 //  Architecture
 //
 //  Created by Ivan Shevelev on 14/07/16.
-//  Copyright © 2016 Sibers. All rights reserved.
+//  Copyright © 2016 Ivan Shevelev. All rights reserved.
 //
 
 import UIKit
