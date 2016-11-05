@@ -10,8 +10,10 @@ import UIKit
 
 class AppRouter {
     
-    static let defaultRouter = AppRouter()
+    static let `default` = AppRouter()
     
     var appearedViewController: UIViewController?
+
+    private init() {}
     
 }

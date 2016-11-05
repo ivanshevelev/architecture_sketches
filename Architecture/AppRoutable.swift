@@ -17,7 +17,7 @@ protocol AppRoutable {
 extension AppRoutable where Self: UIViewController {
 
     func setAppeared() {
-        AppRouter.defaultRouter.appearedViewController = self
+        AppRouter.default.appearedViewController = self
     }
     
 }
