@@ -16,7 +16,7 @@ class Router<T: UIViewController> {
         self.viewController = viewController
     }
     
-    func performSegue<DestinationViewControllerType>(identifier: String, configurate: ((_ viewController: DestinationViewControllerType) -> Void)?) {
+    func performSegue<DestinationViewControllerType: UIViewController>(identifier: String, configurate: ((_ viewController: DestinationViewControllerType) -> Void)?) {
         
         self.viewController?.performSegueWithIdentifier(identifier, sender: self) { (segue) in
             
@@ -34,7 +34,7 @@ class Router<T: UIViewController> {
         
     }
     
-    fileprivate func perform<DestinationViewControllerType>(viewController: UIViewController, identifier: String, configurate: ((_ viewController: DestinationViewControllerType) -> Void)?) {
+    fileprivate func perform<DestinationViewControllerType: UIViewController>(viewController: UIViewController, identifier: String, configurate: ((_ viewController: DestinationViewControllerType) -> Void)?) {
         
         guard let viewController = viewController as? DestinationViewControllerType else {
             fatalError("segue with identifier: \(identifier) doesn't has destinationViewController with type \(DestinationViewControllerType.self)")
