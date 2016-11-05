@@ -2,7 +2,7 @@
 //  DispatchQueue+Once.swift
 //  Architecture
 //
-//  Created by Шевелев Иван Александрович on 05/11/2016.
+//  Created by Ivan Shevelev on 05/11/2016.
 //  Copyright © 2016 Ivan Shevelev. All rights reserved.
 //
 

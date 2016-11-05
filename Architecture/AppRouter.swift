@@ -3,7 +3,7 @@
 //  Architecture
 //
 //  Created by Ivan Shevelev on 01/07/16.
-//  Copyright © 2016 AntsyInc. All rights reserved.
+//  Copyright © 2016 Ivan Shevelev. All rights reserved.
 //
 
 import UIKit
