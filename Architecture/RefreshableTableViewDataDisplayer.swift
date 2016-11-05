@@ -31,8 +31,8 @@ class RefreshableTableViewDataDisplayer: TableViewDataDisplayer {
         self.refreshableDataSource?.collectionDataDisplayer(self) { (error) in
             refreshControl?.endRefreshing()
             self.reloadData()
-            if error != nil {
-                self.delegate?.collectionDataDisplayer(self, didUpdateWithError: error!)
+            if let error = error {
+                self.delegate?.collectionDataDisplayer(self, didUpdateWithError: error)
             }
         }
     }
