@@ -21,28 +21,30 @@ extension UIViewController {
 
     struct AssociatedKey {
         static var ClosurePrepareForSegueKey = "ClosurePrepareForSegueKey"
-        static var token: dispatch_once_t = 0
+        static var token: String = "com.architecturescatches.viewcontroller.swizzling.route"
     }
     
     typealias ConfiguratePerformSegue = (UIStoryboardSegue) -> ()
-    func performSegueWithIdentifier(identifier: String, sender: AnyObject?, configurate: ConfiguratePerformSegue?) {
+    func performSegueWithIdentifier(_ identifier: String, sender: AnyObject?, configurate: ConfiguratePerformSegue?) {
         swizzlingPrepareForSegue()
         self.configuratePerformSegue = configurate
-        performSegueWithIdentifier(identifier, sender: sender)
+        performSegue(withIdentifier: identifier, sender: sender)
     }
     
-    private func swizzlingPrepareForSegue() {
-        dispatch_once(&AssociatedKey.token) {
-            let originalSelector = #selector(UIViewController.prepareForSegue(_:sender:))
+    fileprivate func swizzlingPrepareForSegue() {
+
+        DispatchQueue.once(token: AssociatedKey.token) {
+
+            let originalSelector = #selector(UIViewController.prepare(for:sender:))
             let swizzledSelector = #selector(UIViewController.closurePrepareForSegue(_:sender:))
-            
+
             let instanceClass = UIViewController.self
             let originalMethod = class_getInstanceMethod(instanceClass, originalSelector)
             let swizzledMethod = class_getInstanceMethod(instanceClass, swizzledSelector)
-            
+
             let didAddMethod = class_addMethod(instanceClass, originalSelector,
                                                method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
-            
+
             if didAddMethod {
                 class_replaceMethod(instanceClass, swizzledSelector,
                                     method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
@@ -50,9 +52,10 @@ extension UIViewController {
                 method_exchangeImplementations(originalMethod, swizzledMethod)
             }
         }
+
     }
     
-    func closurePrepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func closurePrepareForSegue(_ segue: UIStoryboardSegue, sender: AnyObject?) {
         self.configuratePerformSegue?(segue)
         self.closurePrepareForSegue(segue, sender: sender)
         self.configuratePerformSegue = nil

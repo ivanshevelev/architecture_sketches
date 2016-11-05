@@ -10,8 +10,8 @@ import UIKit
 
 protocol FullFetchableDataDisplayerDataSource: RefreshableTableViewDataDisplayerDataSource {
     
-    func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
-                                 didFetchNextDataWithCompletion completion: ((error: NSError?) -> Void))
+    func collectionDataDisplayer(_ collectionDataDisplayer: CollectionDataDisplayer,
+                                 didFetchNextDataWithCompletion completion: ((_ error: NSError?) -> Void))
     
     func hasDataForFetch(forCollectionDataDisplayer collectionDataDisplayer: CollectionDataDisplayer) -> Bool
     
@@ -25,11 +25,11 @@ class FullFetchableDataDisplayer: RefreshableTableViewDataDisplayer {
     
     var cellCountBeforeFetch = 5
     
-    private var download = false
+    fileprivate var download = false
     
-    func fetchNextIfNeeded(byIndexPath indexPath: NSIndexPath) {
+    func fetchNextIfNeeded(byIndexPath indexPath: IndexPath) {
         
-        if let hasData = self.fullFetchableDataSource?.hasDataForFetch(forCollectionDataDisplayer: self) where hasData == true {
+        if let hasData = self.fullFetchableDataSource?.hasDataForFetch(forCollectionDataDisplayer: self), hasData == true {
             let cellIndex = indexPath.row
             let maxIndexAtSection = self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: indexPath.section)
             

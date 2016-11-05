@@ -31,7 +31,7 @@ class TableViewDataDisplayer: CollectionDataDisplayer {
 
 extension TableViewDataDisplayer: UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         var result = 0
         
         if let dataSource = self.dataSource {
@@ -41,11 +41,11 @@ extension TableViewDataDisplayer: UITableViewDataSource {
         return result
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: section)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         fatalError("method must be overridden")
         
@@ -55,8 +55,8 @@ extension TableViewDataDisplayer: UITableViewDataSource {
 
 extension TableViewDataDisplayer: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         self.delegate?.collectionDataDisplayer(self, cellTappedAtIndexPath: indexPath)
     }
     

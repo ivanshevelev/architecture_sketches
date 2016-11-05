@@ -10,36 +10,36 @@ import UIKit
 
 class Router<T: UIViewController> {
     
-    weak private(set) var viewController: T?
+    weak fileprivate(set) var viewController: T?
     
     init(viewController: T) {
         self.viewController = viewController
     }
     
-    func performSegue<DestinationViewControllerType>(identifier identifier: String, configurate: ((viewController: DestinationViewControllerType) -> Void)?) {
+    func performSegue<DestinationViewControllerType>(identifier: String, configurate: ((_ viewController: DestinationViewControllerType) -> Void)?) {
         
         self.viewController?.performSegueWithIdentifier(identifier, sender: self) { (segue) in
             
-            if let navigationViewController = segue.destinationViewController as? UINavigationController {
+            if let navigationViewController = segue.destination as? UINavigationController {
                 if let rootViewController = navigationViewController.viewControllers.first {
                     self.perform(viewController: rootViewController, byIdentifier: identifier, configurate: configurate)
                 } else {
                     fatalError("segue with identifier: \(identifier) has destinationViewController as UINavigationController without viewControllers")
                 }
             } else {
-                self.perform(viewController: segue.destinationViewController, byIdentifier: identifier, configurate: configurate)
+                self.perform(viewController: segue.destination, byIdentifier: identifier, configurate: configurate)
             }
             
         }
         
     }
     
-    private func perform<DestinationViewControllerType>(viewController viewController: UIViewController, byIdentifier identifier: String, configurate: ((viewController: DestinationViewControllerType) -> Void)?) {
+    fileprivate func perform<DestinationViewControllerType>(viewController: UIViewController, byIdentifier identifier: String, configurate: ((_ viewController: DestinationViewControllerType) -> Void)?) {
         guard let viewController = viewController as? DestinationViewControllerType else {
             fatalError("segue with identifier: \(identifier) doesn't has destinationViewController with type \(DestinationViewControllerType.self)")
         }
         
-        configurate?(viewController: viewController)
+        configurate?(viewController)
     }
     
 }

@@ -25,7 +25,7 @@ class CollectionViewDataDisplayer: CollectionDataDisplayer {
 
 extension CollectionViewDataDisplayer: UICollectionViewDataSource {
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         var result = 0
         
         if let dataSource = self.dataSource {
@@ -35,11 +35,11 @@ extension CollectionViewDataDisplayer: UICollectionViewDataSource {
         return result
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: section)
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         fatalError("collectionView:cellForItemAtIndexPath must be overridden")
     }
     
@@ -47,9 +47,9 @@ extension CollectionViewDataDisplayer: UICollectionViewDataSource {
 
 extension CollectionViewDataDisplayer: UICollectionViewDelegate {
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+        self.collectionView.deselectItem(at: indexPath, animated: true)
         
         self.delegate?.collectionDataDisplayer(self, cellTappedAtIndexPath: indexPath)
         

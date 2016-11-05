@@ -10,18 +10,18 @@ import UIKit
 
 protocol CollectionDataDisplayerDataSource: class {
     
-    func numberOfSectionsInCollectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer) -> Int
+    func numberOfSectionsInCollectionDataDisplayer(_ collectionDataDisplayer: CollectionDataDisplayer) -> Int
     
-    func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
+    func collectionDataDisplayer(_ collectionDataDisplayer: CollectionDataDisplayer,
                                  numberOfRowsInSection section: Int) -> Int
 }
 
 protocol CollectionDataDisplayerDelegate: class {
     
-    func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
-                                 cellTappedAtIndexPath indexPath: NSIndexPath)
+    func collectionDataDisplayer(_ collectionDataDisplayer: CollectionDataDisplayer,
+                                 cellTappedAtIndexPath indexPath: IndexPath)
     
-    func collectionDataDisplayer(collectionDataDisplayer: CollectionDataDisplayer,
+    func collectionDataDisplayer(_ collectionDataDisplayer: CollectionDataDisplayer,
                                  didUpdateWithError error: NSError)
     
 }
