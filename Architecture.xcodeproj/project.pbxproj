@@ -29,6 +29,8 @@
 		B59E67EE1DCE056D008F3FCA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AE1D2EC96700C0A3CD /* Router.swift */; };
 		B59E67EF1DCE0570008F3FCA /* ViewControllersRoutingSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED11AF1D2EC96700C0A3CD /* ViewControllersRoutingSwizzle.swift */; };
 		B59E67F01DCE0A8B008F3FCA /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522DA201DCDE63200C2DE83 /* DispatchQueue+Once.swift */; };
+		B59E67F41DCE0EF6008F3FCA /* RoutingTests2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59E67F31DCE0EF6008F3FCA /* RoutingTests2.storyboard */; };
+		B59E67F61DCE0F04008F3FCA /* RoutingTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E67F51DCE0F04008F3FCA /* RoutingTests2.swift */; };
 		B5A346A91DCDF59700F332C2 /* AppRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A346A81DCDF59700F332C2 /* AppRoutingTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		B522DA201DCDE63200C2DE83 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
 		B59E67E91DCDFA0E008F3FCA /* RoutingTests1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingTests1.swift; sourceTree = "<group>"; };
 		B59E67EC1DCE0122008F3FCA /* RoutingTest1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RoutingTest1.storyboard; sourceTree = "<group>"; };
+		B59E67F31DCE0EF6008F3FCA /* RoutingTests2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RoutingTests2.storyboard; sourceTree = "<group>"; };
+		B59E67F51DCE0F04008F3FCA /* RoutingTests2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingTests2.swift; sourceTree = "<group>"; };
 		B5A346A61DCDF59700F332C2 /* ArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A346A81DCDF59700F332C2 /* AppRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutingTests.swift; sourceTree = "<group>"; };
 		B5A346AA1DCDF59700F332C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B59E67F11DCE0E6A008F3FCA /* RoutingTests1 */,
+				B59E67F21DCE0EE7008F3FCA /* RoutingTests2 */,
 			);
 			name = RoutingTests;
 			sourceTree = "<group>";
@@ -173,6 +178,15 @@
 				B59E67EC1DCE0122008F3FCA /* RoutingTest1.storyboard */,
 			);
 			name = RoutingTests1;
+			sourceTree = "<group>";
+		};
+		B59E67F21DCE0EE7008F3FCA /* RoutingTests2 */ = {
+			isa = PBXGroup;
+			children = (
+				B59E67F51DCE0F04008F3FCA /* RoutingTests2.swift */,
+				B59E67F31DCE0EF6008F3FCA /* RoutingTests2.storyboard */,
+			);
+			name = RoutingTests2;
 			sourceTree = "<group>";
 		};
 		B5A346A71DCDF59700F332C2 /* ArchitectureTests */ = {
@@ -279,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59E67F41DCE0EF6008F3FCA /* RoutingTests2.storyboard in Resources */,
 				B59E67ED1DCE0122008F3FCA /* RoutingTest1.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +327,7 @@
 				B59E67EA1DCDFA0E008F3FCA /* RoutingTests1.swift in Sources */,
 				B59E67E71DCDF60F008F3FCA /* AppRouter.swift in Sources */,
 				B59E67EF1DCE0570008F3FCA /* ViewControllersRoutingSwizzle.swift in Sources */,
+				B59E67F61DCE0F04008F3FCA /* RoutingTests2.swift in Sources */,
 				B59E67F01DCE0A8B008F3FCA /* DispatchQueue+Once.swift in Sources */,
 				B59E67EE1DCE056D008F3FCA /* Router.swift in Sources */,
 				B5A346A91DCDF59700F332C2 /* AppRoutingTests.swift in Sources */,

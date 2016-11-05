@@ -52,6 +52,5 @@ class RoutingTests1: XCTestCase {
         }
         XCTAssert(configurateCalled)
     }
-
     
 }
