@@ -36,7 +36,13 @@ extension CollectionViewDataDisplayer: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: section)
+        var result = 0
+
+        if let dataSource = self.dataSource {
+            result = dataSource.collectionDataDisplayer(self, numberOfRowsInSection: section)
+        }
+        
+        return result
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -42,7 +42,13 @@ extension TableViewDataDisplayer: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataSource!.collectionDataDisplayer(self, numberOfRowsInSection: section)
+        var result = 0
+
+        if let dataSource = self.dataSource {
+            result = dataSource.collectionDataDisplayer(self, numberOfRowsInSection: section)
+        }
+
+        return result
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
