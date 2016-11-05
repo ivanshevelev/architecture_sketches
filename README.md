@@ -1,4 +1,4 @@
-## Some scetch classes for good iOS app
+## Some sketch classes for good iOS app
 
 readme
 
