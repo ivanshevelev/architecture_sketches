@@ -9,11 +9,15 @@
 import UIKit
 
 protocol AppRoutable {
+
     func setAppeared()
+    
 }
 
 extension AppRoutable where Self: UIViewController {
+
     func setAppeared() {
         AppRouter.defaultRouter.appearedViewController = self
     }
+    
 }

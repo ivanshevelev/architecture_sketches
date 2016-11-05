@@ -25,7 +25,7 @@ class FullFetchableDataDisplayer: RefreshableTableViewDataDisplayer {
     
     var cellCountBeforeFetch = 5
     
-    fileprivate var download = false
+    fileprivate var downloading = false
     
     func fetchNextIfNeeded(byIndexPath indexPath: IndexPath) {
         
@@ -37,15 +37,20 @@ class FullFetchableDataDisplayer: RefreshableTableViewDataDisplayer {
             
             let difference = maxIndexAtSection - cellIndex
             
-            if difference <= self.cellCountBeforeFetch && !self.download {
-                self.download = true
-                self.fullFetchableDataSource?.collectionDataDisplayer(self) { (error) in
-                    self.download = false
+            if difference <= self.cellCountBeforeFetch && !self.downloading {
+                self.downloading = true
+
+                self.fullFetchableDataSource?.collectionDataDisplayer(self) {
+                    (error) in
+                    
+                    self.downloading = false
                     self.reloadData()
+
                     if let error = error {
                         self.delegate?.collectionDataDisplayer(self, didUpdateWithError: error)
                     }
                 }
+
             }
         }
     }

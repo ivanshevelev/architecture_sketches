@@ -11,6 +11,7 @@ import UIKit
 typealias ConfiguratePerformSegue = (UIStoryboardSegue) -> ()
 
 class ConfigurateClosureWrapper {
+
     var value: ConfiguratePerformSegue?
     required init(value: ConfiguratePerformSegue?) {
         self.value = value
@@ -70,4 +71,5 @@ extension UIViewController {
             objc_setAssociatedObject(self, &AssociatedKey.ClosurePrepareForSegueKey, ConfigurateClosureWrapper(value: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
+    
 }

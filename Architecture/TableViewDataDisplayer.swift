@@ -16,7 +16,6 @@ class TableViewDataDisplayer: CollectionDataDisplayer {
         }
     }
     
-    
     func setupAutoCalculatingHeightForRow(withEstimatedRowHeight estimatedRowHeight: CGFloat) {
         self.tableView.estimatedRowHeight = estimatedRowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
